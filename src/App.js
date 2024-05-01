@@ -6,8 +6,10 @@ function App() {
   const [prevColor, setPrevColor] = useState("black");
 
   const handleColorChange = (newColor) => {
-    setPrevColor(color);
-    setColor(newColor);
+    if (newColor !== color) {
+      setPrevColor(color);
+      setColor(newColor);
+    }
   };
 
   return (
